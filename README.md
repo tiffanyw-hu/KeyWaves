@@ -5,8 +5,8 @@ Stuff
 
 #### Functionality and MVP
 Users will be able to: 
--[ ] Click on the screen to generate an audio sound 
--[ ] 
+-[] Click on the screen to generate an audio sound 
+-[] 
 
 #### Wireframes
 This app will consist of a single screen with music and 
