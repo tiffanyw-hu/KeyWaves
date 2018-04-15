@@ -4,13 +4,18 @@
 Stuff
 
 #### Functionality and MVP
-stuff 
+Users will be able to: 
+-[ ] Click on the screen to generate an audio sound 
+-[ ] 
 
 #### Wireframes
-stuff 
+This app will consist of a single screen with music and 
 
 #### Architecture and Technologies 
-stuff 
+This project will be implemented with the following technologies:
++ Vanilla JavaScript
++ `HTML5 Canvas`
++ `Web Audio API`
 
 #### Implementation Timeline
 stuff 
