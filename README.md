@@ -13,7 +13,7 @@ Users will be able to:
 This app will consist of a single screen with music and button controls. Animations will appear and overlay each time a user clicks on a button. 
 
 The grid lines will be invisible but each section will contain a button that's attached to an animation and an audio sample.
-![keywaves](https://drive.google.com/file/d/172F_FkuFAjrREBWEu_CoAZPy5Pqk-VqP/view?usp=sharing)
+![keywaves](http://res.cloudinary.com/dqj3kgpoj/image/upload/v1523826493/keywaves.jpg)
 
 #### Architecture and Technologies 
 This project will be implemented with the following technologies:
@@ -22,4 +22,10 @@ This project will be implemented with the following technologies:
 + `Web Audio API`
 
 #### Implementation Timeline
+*Over the weekend*
++ Complete Canvas and WebAudioAPI tutorial
 
+*Day 1:* Setup necessary node modules
++ Have an object rendered on `Canvas` to create a sound
+
+*Day 2:* 
