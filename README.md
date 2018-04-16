@@ -24,7 +24,7 @@ This project will be implemented with the following technologies:
 + `Web Audio API`
 
 #### Implementation Timeline
-**Over the weekend
+**Over the weekend**
 + Complete Canvas and WebAudioAPI tutorial
 
 **Day 1:** Setup necessary node modules
