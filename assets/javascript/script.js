@@ -1,6 +1,6 @@
-import drawIt from './practice.js';
-import rectangles from './other.js';
-
+import {drawIt, chooseColor} from './ripple.js';
+import rectangles from './rectangles.js';
+import zigZag from './zigzag.js';
 window.requestAnimFrame = (function(){
   return  window.requestAnimationFrame       ||
           window.webkitRequestAnimationFrame ||
@@ -8,13 +8,18 @@ window.requestAnimFrame = (function(){
           window.oRequestAnimationFrame      ||
           window.msRequestAnimationFrame     ||
           function( callback ){
-            window.setTimeout(callback, 1800 / 60);
+            window.setTimeout(callback, 3600 / 60);
           };
 })();
 
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById('one').addEventListener('mousedown',
-  () => {requestAnimationFrame(drawIt)} ),
+  () => {
+    chooseColor()
+    drawIt()
+  } )
   document.getElementById('two').addEventListener('mousedown',
   () => {requestAnimFrame(rectangles)} )
+  document.getElementById('three').addEventListener('mousedown',
+  () => {requestAnimFrame(zigZag)} )
 })

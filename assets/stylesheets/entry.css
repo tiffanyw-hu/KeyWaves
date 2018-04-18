@@ -22,3 +22,14 @@
   background-color: red;
   cursor: pointer;
 }
+
+canvas {
+  position: absolute;
+  top: 0;
+}
+
+#second-canvas {
+  left: 0;
+  right: 0;
+  margin: auto;
+}
