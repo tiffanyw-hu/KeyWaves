@@ -1,4 +1,5 @@
 import drawIt from './practice.js';
+import rectangles from './other.js';
 
 window.requestAnimFrame = (function(){
   return  window.requestAnimationFrame       ||
@@ -13,5 +14,7 @@ window.requestAnimFrame = (function(){
 
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById('one').addEventListener('mousedown',
-  () => {window.requestAnimFrame(drawIt)} )
+  () => {requestAnimFrame(drawIt)} ),
+  document.getElementById('two').addEventListener('mousedown',
+  () => {requestAnimFrame(rectangles)} )
 })
