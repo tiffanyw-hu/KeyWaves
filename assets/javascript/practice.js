@@ -24,7 +24,6 @@
 //
 // }
 let radius = Math.random() * 30;
-let colors = ['green', 'blue', 'red']
 let ctx = null;
 let canvas = document.getElementById('canvas');
 function createCircle(currentAnimation) {
@@ -48,6 +47,6 @@ function createCircle(currentAnimation) {
 
 let x = 0;
 export default function drawIt() {
-  let currentAnimation = requestAnimFrame(drawIt);
+  let currentAnimation = requestAnimationFrame(drawIt);
   createCircle(currentAnimation);
 }

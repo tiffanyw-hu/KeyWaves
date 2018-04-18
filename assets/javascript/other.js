@@ -1,14 +1,23 @@
 function createRectangles() {
-  if(tick % 10 == 0) {
-    if (rectangleArray.length < 5) {
+  if(tick % 10 == 0 && tick < 60) {
+    if (rectangleArray.length < 5 && arrayIsFilled === false) {
+      let startingX = 50
+      if (rectangleArray.length >= 1) {
+        startingX = rectangleArray[rectangleArray.length - 1]['x'] + 100
+      }
+      console.log(rectangleArray)
+      console.log(startingX)
       rectangleArray.push({
-        x: rectangle.x + dx,
+        x: startingX,
         y: 0,
-        speed: 2+Math.random()*3,
+        speed: 10,
         width: 80,
         height: 200,
         colour: 'blue',
       });
+      if (rectangleArray.length === 5) {
+        arrayIsFilled = true
+      }
     }
   }
 }
@@ -21,11 +30,16 @@ function updateRectangles() {
 }
 
 function killRectangles(currentAnimation) {
-  for(let i in rectangleArray) {
-    let rectangle = rectangleArray[i];
-    if (rectangle.y > canvas.height) {
-      rectangle.y = 0;
-      cancelAnimationFrame(currentAnimation);
+  if (rectangleArray.length > 0) {
+    for(let i in rectangleArray) {
+      let rectangle = rectangleArray[i];
+      if (rectangle) {
+        if (rectangle.y > canvas.height + 150) {
+          rectangle.y = 0;
+          cancelAnimationFrame(currentAnimation)
+          rectangleArray = []
+        }
+      }
     }
   }
 }
@@ -51,11 +65,12 @@ let dx = 150;
 let x = 0;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
+let arrayIsFilled = false;
 
 export default function rectangles() {
   let currentAnimation = requestAnimFrame(rectangles)
   createRectangles();
   updateRectangles();
   drawRectangles();
-  killRectangles();
+  killRectangles(currentAnimation);
 }

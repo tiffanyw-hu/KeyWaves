@@ -14,7 +14,7 @@ window.requestAnimFrame = (function(){
 
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById('one').addEventListener('mousedown',
-  () => {requestAnimFrame(drawIt)} ),
+  () => {requestAnimationFrame(drawIt)} ),
   document.getElementById('two').addEventListener('mousedown',
   () => {requestAnimFrame(rectangles)} )
 })
