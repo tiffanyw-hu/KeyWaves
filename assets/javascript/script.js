@@ -6,6 +6,7 @@ import reverseRipple from './ripple3.js'
 import manyRectangles from './rectangles3.js'
 import verticalZigZag from './zigzag2.js'
 import horizontalScreen from './screen.js'
+import otherScreen from './rectangles4.js'
 
 window.requestAnimFrame = (function(){
   return  window.requestAnimationFrame       ||
@@ -35,4 +36,34 @@ document.addEventListener("DOMContentLoaded", () => {
   () => {requestAnimFrame(verticalZigZag)} )
   document.getElementById('eight').addEventListener('mousedown',
   () => {requestAnimFrame(horizontalScreen)} )
+  document.getElementById('nine').addEventListener('mousedown',
+  () => {requestAnimFrame(otherScreen)} )
+  document.getElementById('start').addEventListener('click',
+  (e) => {
+    e.preventDefault();
+    document.getElementsByClassName('container')[0].className = 'container'
+    document.getElementById('start-menu').className = 'hidden'
+    let bgm = document.getElementById('audio')
+    bgm.play();
+    document.getElementById('audio')
+  })
+  document.getElementById('back').addEventListener('click',
+  (e) => {
+    e.preventDefault();
+    document.getElementsByClassName('container')[0].className = 'container hidden'
+    document.getElementById('start-menu').className = 'start'
+  })
+  document.getElementById('mute').addEventListener('click',
+  (e) => {
+    e.preventDefault();
+    let bgm = document.getElementById('audio')
+    if (bgm.muted) {
+      bgm.play();
+      bgm.muted = false;
+    }
+    if (!bgm.muted) {
+      bgm.pause();
+      bgm.muted = true;
+    }
+  })
 })

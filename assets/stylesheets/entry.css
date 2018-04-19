@@ -1,15 +1,46 @@
 .container {
   display: flex;
-  flex-direction: row;;
+  flex-direction: row;
   width: 100%;
   height: 100vh;
   position: absolute;
   top: 0;
 }
 
+.hidden {
+  display: none !important;
+}
+
+#start-menu {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 33%;
+  color: white;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  line-height: 1.5;
+  z-index: 5000;
+}
+
+#start-menu > a {
+  text-decoration: none;
+  color: white;
+}
+
 .column {
   width: 33%;
   height: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: inherit;
+  z-index: 5000;
+  top: 0;
+  position: absolute;
 }
 
 .column > div {
@@ -27,8 +58,8 @@
 
 body {
   background-color: black;
-
 }
+
 canvas {
   position: absolute;
   top: 0;
@@ -46,4 +77,22 @@ canvas {
   right: 0;
   margin: auto;
   border: 1px solid black;
+}
+
+#back {
+  color: white;
+  text-decoration: none;
+  z-index: 5000;
+  top: 0;
+}
+
+#mute {
+  color: white;
+  text-decoration: none;
+  z-index: 5000;
+  top: 0;
+}
+
+#audio {
+  display: none;
 }

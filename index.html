@@ -5,6 +5,12 @@
     <title>Sound Board</title>
   </head>
   <body>
+    <div className="start" id="start-menu">
+    <h1>KeyWaves</h1>
+      <div>Click around!</div>
+      <a href="#" id="start">Start</a>
+    </div>
+
     <canvas id="canvas"></canvas>
     <canvas id="second-canvas"></canvas>
     <canvas id="third-canvas"></canvas>
@@ -17,7 +23,21 @@
 
     <script type="module" src="./assets/javascript/script.js"></script>
     <link rel="stylesheet" type="text/css" href="./assets/stylesheets/entry.css" />
-    <div class="container">
+    <div class="container hidden">
+      <div class="nav">
+        <a href="#" id="back">< Back</a>
+        <a href="#" id="mute">Mute</a>
+      </div>
+
+      <div class="something">
+        <audio id="audio" controls loop>
+          <source src="./assets/sounds/bgm.wav">
+        </audio>
+        <audio id="first-audio">
+          <source src="./assets/sounds/414.wav">
+        </audio>
+      </div>
+
       <div class="Col1 column">
         <div id="one"></div>
         <div id ="two"></div>

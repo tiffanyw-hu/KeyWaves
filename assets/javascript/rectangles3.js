@@ -1,19 +1,19 @@
 function createRectangles() {
   // if(tick % 10 == 0 && tick < 60) {
-    if (rectangleArray.length < 250 && arrayIsFilled === false) {
+    if (rectangleArray.length < 50 && arrayIsFilled === false) {
       // let startingX = 0
       // if (rectangleArray.length >= 1) {
-      //   startingX = rectangleArray[rectangleArray.length - 1]['x'] + 70
+      //   startingX = rectangleArray[rectangleArray.length - 1]['x'] + 60
       // }
       rectangleArray.push({
         x: Math.random() * canvas.width,
         y: 0,
-        speed: 50,
+        speed: 80,
         width: 5,
         height: 410,
         colour: 'white',
       });
-      if (rectangleArray.length >= 250) {
+      if (rectangleArray.length >= 50) {
         arrayIsFilled = true
       }
     }
@@ -33,7 +33,7 @@ function killRectangles(currentAnimation) {
     for(let i in rectangleArray) {
       let rectangle = rectangleArray[i];
       if (rectangle) {
-        if (rectangle.y > canvas.height) {
+        if (rectangleArray[rectangleArray.length - 1].y > canvas.height) {
           rectangle.y = 0;
           cancelAnimationFrame(currentAnimation)
           ctx.clearRect(0, 0, canvas.width, canvas.height)
