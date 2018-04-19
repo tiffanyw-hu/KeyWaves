@@ -57,11 +57,11 @@ document.addEventListener("DOMContentLoaded", () => {
   (e) => {
     e.preventDefault();
     let bgm = document.getElementById('audio')
-    if (bgm.muted) {
+    if (bgm.muted === true) {
       bgm.play();
       bgm.muted = false;
     }
-    if (!bgm.muted) {
+    if (bgm.muted === false) {
       bgm.pause();
       bgm.muted = true;
     }
