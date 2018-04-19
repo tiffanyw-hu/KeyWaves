@@ -1,31 +1,30 @@
 function createRectangles() {
-  if(tick % 10 == 0 && tick < 60) {
+  // if(tick % 10 == 0 && tick < 60) {
     if (rectangleArray.length < 5 && arrayIsFilled === false) {
-      let startingX = 100
+      let startingY = 100
       if (rectangleArray.length >= 1) {
-        startingX = rectangleArray[rectangleArray.length - 1]['x'] + 130
+        startingY = rectangleArray[rectangleArray.length - 1]['y'] + 100
       }
-      console.log(rectangleArray)
-      console.log(startingX)
+
       rectangleArray.push({
-        x: startingX,
-        y: 100,
+        x: 200,
+        y: startingY,
         speed: 18,
-        width: 70,
-        height: 410,
-        colour: 'blue',
+        width: 410,
+        height: 30,
+        colour: 'white',
       });
       if (rectangleArray.length === 5) {
         arrayIsFilled = true
       }
     }
-  }
+  // }
 }
 
 function updateRectangles() {
   for(let i in rectangleArray) {
     let rectangle = rectangleArray[i];
-    rectangle.y += rectangle.speed;
+    rectangle.x += rectangle.speed;
   }
 }
 
@@ -35,8 +34,8 @@ function killRectangles(currentAnimation) {
     for(let i in rectangleArray) {
       let rectangle = rectangleArray[i];
       if (rectangle) {
-        if (rectangle.y > canvas.height) {
-          rectangle.y = 0;
+        if (rectangle.x > canvas.width) {
+          rectangle.x = 0;
           cancelAnimationFrame(currentAnimation)
           ctx.clearRect(0, 0, canvas.width, canvas.height)
 
@@ -50,7 +49,7 @@ function killRectangles(currentAnimation) {
 
 function drawRectangles() {
   let ctx = canvas.getContext('2d');
-  ctx.fillStyle = 'blue';
+  ctx.fillStyle = 'white';
   ctx.clearRect(0, 0, canvas.width, canvas.height)
   for(let i in rectangleArray) {
     let rectangle = rectangleArray[i];
@@ -62,17 +61,16 @@ function drawRectangles() {
   }
 }
 
-let canvas = document.getElementById('second-canvas');
+let canvas = document.getElementById('fourth-canvas');
 let rectangleArray = [];
 let tick = 0;
-let dx = 150;
-let x = 0;
-canvas.width = window.innerWidth/2 + 150;
+let y = 0;
+canvas.width = window.innerWidth/2 + 400;
 canvas.height = window.innerHeight - 200;
 let arrayIsFilled = false;
 
-export default function rectangles() {
-  let currentAnimation = requestAnimFrame(rectangles)
+export default function horizontalRectangles() {
+  let currentAnimation = requestAnimFrame(horizontalRectangles)
   createRectangles();
   updateRectangles();
   drawRectangles();

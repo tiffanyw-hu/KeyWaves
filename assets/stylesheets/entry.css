@@ -1,7 +1,6 @@
 .container {
   display: flex;
   flex-direction: row;;
-  /*background-color: green;*/
   width: 100%;
   height: 100vh;
   position: absolute;
@@ -9,27 +8,42 @@
 }
 
 .column {
-  width: 20%;
+  width: 33%;
   height: 100%;
 }
 
 .column > div {
-  height: 25%;
+  height: 33%;
   width: 100%;
 }
 
 .column > div:hover {
-  background-color: red;
   cursor: pointer;
 }
 
+.column > div:active {
+  background-color: white;
+}
+
+body {
+  background-color: black;
+
+}
 canvas {
   position: absolute;
   top: 0;
+  color: white;
 }
 
 #second-canvas {
   left: 0;
   right: 0;
   margin: auto;
+}
+
+#fourth-canvas {
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 1px solid black;
 }

@@ -11,7 +11,6 @@ function createCircle(currentAnimation) {
   ctx.lineWidth = 5;
   ctx.stroke();
   radius += 10
-  console.log(radius)
   if (radius > canvas.width + 180 || radius > canvas.height + 180) {
     radius = 0;
     cancelAnimationFrame(currentAnimation)

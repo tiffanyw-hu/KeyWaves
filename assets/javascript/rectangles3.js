@@ -1,23 +1,23 @@
 function createRectangles() {
-  if(tick % 10 == 0 && tick < 60) {
-    if (rectangleArray.length < 5 && arrayIsFilled === false) {
-      let startingX = 100
-      if (rectangleArray.length >= 1) {
-        startingX = rectangleArray[rectangleArray.length - 1]['x'] + 130
-      }
+  // if(tick % 10 == 0 && tick < 60) {
+    if (rectangleArray.length < 250 && arrayIsFilled === false) {
+      // let startingX = 0
+      // if (rectangleArray.length >= 1) {
+      //   startingX = rectangleArray[rectangleArray.length - 1]['x'] + 70
+      // }
       rectangleArray.push({
-        x: startingX,
-        y: 100,
-        speed: 18,
-        width: 70,
+        x: Math.random() * canvas.width,
+        y: 0,
+        speed: 50,
+        width: 5,
         height: 410,
         colour: 'white',
       });
-      if (rectangleArray.length === 5) {
+      if (rectangleArray.length >= 250) {
         arrayIsFilled = true
       }
     }
-  }
+  // }
 }
 
 function updateRectangles() {
@@ -60,17 +60,16 @@ function drawRectangles() {
   }
 }
 
-let canvas = document.getElementById('second-canvas');
+let canvas = document.getElementById('sixth-canvas');
 let rectangleArray = [];
 let tick = 0;
-let dx = 150;
-let x = 0;
-canvas.width = window.innerWidth/2 + 150;
-canvas.height = window.innerHeight - 200;
+let y = 0;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 let arrayIsFilled = false;
 
-export default function rectangles() {
-  let currentAnimation = requestAnimFrame(rectangles)
+export default function manyRectangles() {
+  let currentAnimation = requestAnimFrame(manyRectangles)
   createRectangles();
   updateRectangles();
   drawRectangles();
