@@ -5,10 +5,14 @@
     <title>Sound Board</title>
   </head>
   <body>
-    <div className="start" id="start-menu">
+    <div class="start" id="start-menu">
     <h1>KeyWaves</h1>
       <div>Click around!</div>
       <a href="#" id="start">Start</a>
+      <div class="start-nav">
+        <a href="#" class="mute-sound">Mute Sound</a>
+        <a href="#" class="mute">Mute BGM</a>
+      </div>
     </div>
 
     <canvas id="canvas"></canvas>
@@ -26,12 +30,12 @@
     <div class="container hidden">
       <div class="nav">
         <a href="#" id="back">< Back</a>
-        <a href="#" id="mute-sound">Mute Sound</a>
-        <a href="#" id="mute">Mute</a>
+        <a href="#" class="mute-sound">Mute Effects</a>
+        <a href="#" class="mute">Mute BGM</a>
       </div>
 
       <div class="something">
-        <audio class="audio-class" id="audio" controls loop>
+        <audio class="bgm-audio" id="audio" controls loop>
           <source src="./assets/sounds/bgm.wav">
         </audio>
         <audio class="audio-class" id="first-audio">

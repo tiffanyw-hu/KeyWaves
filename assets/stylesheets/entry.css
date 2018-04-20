@@ -90,7 +90,7 @@ canvas {
   top: 0;
 }
 
-#mute {
+.mute {
   color: white;
   text-decoration: none;
   z-index: 5000;
@@ -102,9 +102,20 @@ canvas {
   display: none;
 }
 
-#mute-sound {
+.mute-sound {
   text-decoration: none;
   color: white;
   z-index: 5000;
   top: 0;
+}
+
+.start-nav {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.start-nav > a {
+  margin-left: 15px;
+  margin-right: 20px;
 }

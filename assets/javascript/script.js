@@ -89,13 +89,28 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementsByClassName('container')[0].className = 'container hidden'
     document.getElementById('start-menu').className = 'start'
   })
-  document.getElementById('mute').addEventListener('click',
+  document.getElementsByClassName('mute')[0].addEventListener('click',
   (e) => {
     let bgm = document.getElementById('audio')
     bgm.muted = !bgm.muted;
     e.preventDefault();
   }, false);
-  document.getElementById('mute-sound').addEventListener('click',
+  document.getElementsByClassName('mute')[1].addEventListener('click',
+  (e) => {
+    let bgm = document.getElementById('audio')
+    bgm.muted = !bgm.muted;
+    e.preventDefault();
+  }, false);
+  document.getElementsByClassName('mute-sound')[0].addEventListener('click',
+  (e) => {
+    e.preventDefault();
+    let sounds = document.getElementsByClassName('audio-class')
+    for(let i=0; i<sounds.length; i++) {
+      let sound = sounds[i]
+      sound.muted = !sound.muted;
+    }
+  }, false);
+  document.getElementsByClassName('mute-sound')[1].addEventListener('click',
   (e) => {
     e.preventDefault();
     let sounds = document.getElementsByClassName('audio-class')
