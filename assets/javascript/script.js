@@ -21,23 +21,59 @@ window.requestAnimFrame = (function(){
 
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById('one').addEventListener('mousedown',
-  () => {circleRipple()} )
+  () => {
+    circleRipple();
+    let firstAudio = document.getElementById('first-audio');
+    firstAudio.play();
+  } )
   document.getElementById('two').addEventListener('mousedown',
-  () => {requestAnimFrame(rectangles)} )
+  () => {
+    requestAnimFrame(rectangles)
+    let secondAudio = document.getElementById('second-audio');
+    secondAudio.play();
+  } )
   document.getElementById('three').addEventListener('mousedown',
-  () => {requestAnimFrame(zigZag)} )
+  () => {
+    requestAnimFrame(zigZag)
+    let thirdAudio = document.getElementById('third-audio')
+    thirdAudio.play();
+  } )
   document.getElementById('four').addEventListener('mousedown',
-  () => {requestAnimFrame(horizontalRectangles)} )
+  () => {
+    requestAnimFrame(horizontalRectangles)
+    let fourthAudio = document.getElementById('fourth-audio')
+    fourthAudio.play();
+  } )
   document.getElementById('five').addEventListener('mousedown',
-  () => {requestAnimFrame(reverseRipple)} )
+  () => {
+    requestAnimFrame(reverseRipple)
+    let fifthAudio = document.getElementById('fifth-audio');
+    fifthAudio.play();
+  } )
   document.getElementById('six').addEventListener('mousedown',
-  () => {requestAnimFrame(manyRectangles)} )
+  () => {
+    requestAnimFrame(manyRectangles)
+    let sixthAudio = document.getElementById('sixth-audio');
+    sixthAudio.play();
+  } )
   document.getElementById('seven').addEventListener('mousedown',
-  () => {requestAnimFrame(verticalZigZag)} )
+  () => {
+    requestAnimFrame(verticalZigZag)
+    let seventhAudio = document.getElementById('seventh-audio')
+    seventhAudio.play();
+  } )
   document.getElementById('eight').addEventListener('mousedown',
-  () => {requestAnimFrame(horizontalScreen)} )
+  () => {
+    requestAnimFrame(horizontalScreen)
+    let eighthAudio = document.getElementById('eighth-audio');
+    eighthAudio.play();
+    } )
   document.getElementById('nine').addEventListener('mousedown',
-  () => {requestAnimFrame(otherScreen)} )
+  () => {
+    requestAnimFrame(otherScreen)
+    let ninthAudio = document.getElementById('ninth-audio');
+    ninthAudio.play();
+  } )
   document.getElementById('start').addEventListener('click',
   (e) => {
     e.preventDefault();
@@ -55,15 +91,17 @@ document.addEventListener("DOMContentLoaded", () => {
   })
   document.getElementById('mute').addEventListener('click',
   (e) => {
-    e.preventDefault();
     let bgm = document.getElementById('audio')
-    if (bgm.muted === true) {
-      bgm.play();
-      bgm.muted = false;
+    bgm.muted = !bgm.muted;
+    e.preventDefault();
+  }, false);
+  document.getElementById('mute-sound').addEventListener('click',
+  (e) => {
+    e.preventDefault();
+    let sounds = document.getElementsByClassName('audio-class')
+    for(let i=0; i<sounds.length; i++) {
+      let sound = sounds[i]
+      sound.muted = !sound.muted;
     }
-    if (bgm.muted === false) {
-      bgm.pause();
-      bgm.muted = true;
-    }
-  })
+  }, false);
 })

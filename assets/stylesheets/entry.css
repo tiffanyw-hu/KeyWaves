@@ -36,7 +36,7 @@
 
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: inherit;
   z-index: 5000;
   top: 0;
@@ -46,6 +46,10 @@
 .column > div {
   height: 33%;
   width: 100%;
+  background-color: none;
+  transition: background-color .1s ease-in-out;
+  -moz-transition: background-color .1s ease-in-out;
+  -webkit-transition: background-color .1s ease-in-out;
 }
 
 .column > div:hover {
@@ -96,4 +100,11 @@ canvas {
 
 #audio {
   display: none;
+}
+
+#mute-sound {
+  text-decoration: none;
+  color: white;
+  z-index: 5000;
+  top: 0;
 }
