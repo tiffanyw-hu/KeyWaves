@@ -1,12 +1,12 @@
 import {circleRipple} from './ripple.js';
 import rectangles from './rectangles.js';
 import zigZag from './zigzag.js';
-import horizontalRectangles from './rectangles2.js'
-import reverseRipple from './ripple3.js'
-import manyRectangles from './rectangles3.js'
-import verticalZigZag from './zigzag2.js'
-import horizontalScreen from './screen.js'
-import otherScreen from './rectangles4.js'
+import horizontalRectangles from './rectangles2.js';
+import reverseRipple from './ripple3.js';
+import manyRectangles from './rectangles3.js';
+import verticalZigZag from './zigzag2.js';
+import horizontalScreen from './screen.js';
+import otherScreen from './rectangles4.js';
 
 window.requestAnimFrame = (function(){
   return  window.requestAnimationFrame       ||
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     bgm.muted = !bgm.muted;
     e.preventDefault();
   }, false);
-  document.getElementsByClassName('mute-sound').addEventListener('click',
+  document.getElementsByClassName('mute-sound')[0].addEventListener('click',
   (e) => {
     e.preventDefault();
     let sounds = document.getElementsByClassName('audio-class')
