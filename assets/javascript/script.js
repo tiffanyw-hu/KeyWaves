@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     bgm.muted = !bgm.muted;
     e.preventDefault();
   }, false);
-  document.getElementsByClassName('mute')[].addEventListener('click',
+  document.getElementsByClassName('mute')[1].addEventListener('click',
   (e) => {
     let bgm = document.getElementById('audio')
     bgm.muted = !bgm.muted;
