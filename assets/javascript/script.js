@@ -92,18 +92,21 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementsByClassName('mute')[0].addEventListener('click',
   (e) => {
     let bgm = document.getElementById('audio')
+    document.getElementsByClassName('mute')[0].className = 'strike'
     bgm.muted = !bgm.muted;
     e.preventDefault();
   }, false);
   document.getElementsByClassName('mute')[1].addEventListener('click',
   (e) => {
     let bgm = document.getElementById('audio')
+    document.getElementsByClassName('mute')[1].className = 'strike'
     bgm.muted = !bgm.muted;
     e.preventDefault();
   }, false);
   document.getElementsByClassName('mute-sound')[0].addEventListener('click',
   (e) => {
     e.preventDefault();
+    document.getElementsByClassName('mute-sound')[0].className = 'strike'
     let sounds = document.getElementsByClassName('audio-class')
     for(let i=0; i<sounds.length; i++) {
       let sound = sounds[i]
@@ -113,6 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementsByClassName('mute-sound')[1].addEventListener('click',
   (e) => {
     e.preventDefault();
+    document.getElementsByClassName('mute-sound')[1].className = 'strike'
     let sounds = document.getElementsByClassName('audio-class')
     for(let i=0; i<sounds.length; i++) {
       let sound = sounds[i]
