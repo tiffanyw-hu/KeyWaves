@@ -110,4 +110,13 @@ document.addEventListener("DOMContentLoaded", () => {
       sound.muted = !sound.muted;
     }
   }, false);
+  document.getElementsByClassName('mute-sound')[1].addEventListener('click',
+  (e) => {
+    e.preventDefault();
+    let sounds = document.getElementsByClassName('audio-class')
+    for(let i=0; i<sounds.length; i++) {
+      let sound = sounds[i]
+      sound.muted = !sound.muted;
+    }
+  }, false);
 })

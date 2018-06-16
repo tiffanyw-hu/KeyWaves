@@ -132,3 +132,7 @@ canvas {
 #start-menu > h1 {
   margin-bottom: -10px;
 }
+
+.strike {
+  text-decoration: line-through;
+}
