@@ -102,6 +102,10 @@ canvas {
   left: 0;
 }
 
+.mute:hover {
+  cursor: crosshair;
+}
+
 #audio {
   display: none;
 }
@@ -111,6 +115,10 @@ canvas {
   color: white;
   z-index: 5000;
   top: 0;
+}
+
+.mute-sound:hover {
+  cursor: crosshair;
 }
 
 .start-nav {

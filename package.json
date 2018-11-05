@@ -4,6 +4,7 @@
   "description": "KeyWaves is a generative music sound board combining animation visuals and music for an interactive user experience. Each button will be attached to an animation sequence, and a user will be able to create melodies by clicking around the screen.",
   "main": "index.js",
   "scripts": {
+    "webpack": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
