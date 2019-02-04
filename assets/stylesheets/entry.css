@@ -11,6 +11,19 @@
   display: none !important;
 }
 
+.title {
+  font-size: 22px;
+}
+
+.description {
+  margin: -7px 0px 10px 0px;
+}
+
+.instructions {
+  margin: 21px 0px 10px 9px;
+  font-size: 22px;
+}
+
 #start-menu {
   position: absolute;
   text-align: center;
@@ -27,6 +40,13 @@
 #start-menu > a {
   text-decoration: none;
   color: white;
+  font-size: 34px;
+  font-weight: bold;
+}
+
+#start-menu > a:hover {
+  text-decoration: underline;
+  cursor:pointer;
 }
 
 .column {
