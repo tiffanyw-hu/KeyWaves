@@ -39,14 +39,25 @@
 
 #start-menu > a {
   text-decoration: none;
-  color: white;
+  /* color: white; */
   font-size: 34px;
   font-weight: bold;
+}
+
+#start-menu > a:first-child {
+  color: white;
 }
 
 #start-menu > a:hover {
   text-decoration: underline;
   cursor:pointer;
+}
+
+#start {
+  background-color: white;
+  color: black;
+  padding: 8px 8px 8px 8px;
+  border-radius: 8px;
 }
 
 .column {
@@ -124,6 +135,7 @@ canvas {
 
 .mute:hover {
   cursor: crosshair;
+  text-decoration: underline;
 }
 
 #audio {
@@ -139,6 +151,7 @@ canvas {
 
 .mute-sound:hover {
   cursor: crosshair;
+  text-decoration: underline;
 }
 
 .start-nav {
