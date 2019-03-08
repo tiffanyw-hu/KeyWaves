@@ -39,7 +39,6 @@
 
 #start-menu > a {
   text-decoration: none;
-  /* color: white; */
   font-size: 34px;
   font-weight: bold;
 }
@@ -49,7 +48,8 @@
 }
 
 #start-menu > a:hover {
-  text-decoration: underline;
+  color: black;
+  background-color: white;
   cursor:pointer;
 }
 
