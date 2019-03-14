@@ -108,7 +108,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementsByClassName('mute')[1].addEventListener('click',
   (e) => {
     e.preventDefault();
-    console.log(Array.from(document.getElementsByClassName('mute')))
     Array.from(document.getElementsByClassName('mute')).forEach(el => {
       el.innerHTML = (el.innerHTML === "Mute BGM") ? "Unmute BGM" : "Mute BGM"
     })
